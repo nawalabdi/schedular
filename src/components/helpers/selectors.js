@@ -30,13 +30,42 @@
 // };
 
 
- export function getAppointmentsForDay(state, day) {
-  const filteredAppointments = [];
-  let dayObj = state.days.find(d => d.name === day)
-  if (!dayObj) return [];
-  dayObj.appointments.forEach(appointmentId => {
-    filteredAppointments.push(state.appointments[appointmentId])
-  });
-  return filteredAppointments
+//  export function getAppointmentsForDay(state, day) {
+//   const filteredAppointments = [];
+//   let dayObj = state.days.find(d => d.name === day)
+//   if (!dayObj) return [];
+//   dayObj.appointments.forEach(appointmentId => {
+//     filteredAppointments.push(state.appointments[appointmentId])
+//   });
+//   return filteredAppointments
+// }
+
+export function getAppointmentsForDay(state, day) {
+  const results = [];
+  //finding the day object in our state.days array 
+  const dayObj = state.days.find(d => d.name === day);
+
+  if (!dayObj) {
+    return [];
+  }
+
+  for (let id of dayObj.appointments) {
+    results.push(state.appointments[id]);
+  }
+  return results;
 }
 
+
+export function getInterview(state, interview) {
+  if (!interview) {
+    return null;
+  } else {
+    console.log(state)
+    const interviewerInfo = state.interviewers[interview.interviewer]
+    
+    return {
+      student: interview.student,
+      interviewer: interviewerInfo
+    };
+  }
+}
