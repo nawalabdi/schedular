@@ -58,8 +58,6 @@ export default function Application(props) {
         appointments
       });
 
-    }).catch((error) =>{
-      console.error(error)
     })
   }
 
@@ -80,7 +78,7 @@ export default function Application(props) {
           appointments
         });
       });
-  };
+    };
 
 
 
