@@ -28,8 +28,3 @@ return (<section className="interviewers" >
   )
 }
 
-// InterviewerList.propTypes = {
-//   interviewers: PropTypes.array.isRequired
-// };
-
-
