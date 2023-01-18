@@ -1,5 +1,10 @@
 # Interview Scheduler
 
+## Screenshots
+![Main appointment form ](https://github.com/nawalabdi/schedular/blob/master/docs/appointment-form.png?raw=true)
+![Deletean interview form](https://github.com/nawalabdi/schedular/blob/master/docs/delete-edit-form.png?raw=true)
+![Edit an interview form](https://github.com/nawalabdi/schedular/blob/master/docs/enter-name.png?raw=true)
+
 ## Key Features on the Scheduler App
 
 Interviews can be booked between Monday and Friday.
